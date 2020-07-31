@@ -13,7 +13,7 @@
     <p>There is currently no record of any Stylists at EauSalon.</p>
     <p>If you'd like to add a Stylist to your records, click on the link below.</p>
   </div>
-  <p class="linked">@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Cuisine")</p>
+  <p class="linked">@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
 }
 else
 {
@@ -21,5 +21,6 @@ else
   {
     <li>@Html.ActionLink("${stylist.Name}", "Details", new {id = stylist.StylistId})</li>
   }
+  <p class="linked">@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
   <p class="linked">@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
 }
