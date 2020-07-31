@@ -7,6 +7,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }
 
 h1, h3 {
@@ -17,21 +18,21 @@ h1, h3 {
   color: #333;
   font-size: 1.5em;
   padding: 10px;
-  background: rgba(255, 255, 255, .7);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, .5);
+}
+
+li {
+  font-size: 2em;
+  list-style-type: circle;
+  color: #FFF;
 }
 
 .linked {
   color: #333;
-  font-size: 2em;
   background: rgba(255, 255, 255, .7);
   box-shadow: 0 15px 20px rgba(0, 0, 0, .5);
   padding: 10px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin: 50px auto;
   width: 40%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .form-control {
@@ -53,3 +54,4 @@ input.btn-default {
   padding: 15px;
   margin-bottom: 0;
 }
+
