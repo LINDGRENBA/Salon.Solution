@@ -75,7 +75,7 @@ _Welcome Claire! Now keeping your business organized is easier than ever! You ca
 or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\EauSalon.csproj] | Run `dotnet build` | Y | Update namespace in Stylist.cs from EauSalon to EauSalon.Models |
 | Models\EauSalonContext.cs(12,22): error CS1061: 'DbContextOptionsBuilder' does not contain a definition for 'UseLazyLoadingProxies' and no accessible extension method 'UseLazyLoadingProxies' accepting a first argument of type 'DbContextOptionsBuilder' could be found (are you missing a using directive or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\EauSalon.csproj] | Run `dotnet build` | Y | Remove `protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){optionsBuilder.UseLazyLoadingProxies();}` from EauSalonContext.cs |
 | NullReferenceException: Object reference not set to an instance of an object | Click on 'See a list of all Stylists' link on Splash Page | N | Create List in StylistsController for Index() to get list of stylists from database, pass list to Index view |
-| x | x | N | x |
+| C:\Program Files\dotnet\sdk\2.2.203\Sdks\Microsoft.NET.Sdk.Razor\build\netstandard2.0\Sdk.Razor.CurrentVersion.targets(510,5): error MSB3027: Could not copy "obj\Debug\netcoreapp2.2\EauSalon.Views.dll" to "C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\bin\Debug\netcoreapp2.2\EauSalon.Views.dll". Exceeded retry count of 10. Failed.  | Enter command `dotnet watch run` into terminal | N | x |
 | x | x | N | x |
 | x | x | N | x |
 
