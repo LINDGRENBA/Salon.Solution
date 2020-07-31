@@ -8,7 +8,18 @@
 <h1>EauSalon's Stylists</h1>
 
 @if(@Model.Count == 0)
-{
-  <p class="notice">There is currently no record of any Stylists at EauSalon. If you'd like to add a Stylist to your records, click on the link below.</p>
+{ 
+  <div class="notice">
+    <p>There is currently no record of any Stylists at EauSalon.</p>
+    <p>If you'd like to add a Stylist to your records, click on the link below.</p>
+  </div>
   <p class="linked">@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Cuisine")</p>
+}
+else
+{
+  @foreach(Stylist stylist in Model)
+  {
+    <li>@Html.ActionLink("${stylist.Name}", "Details", new {id = stylist.StylistId})</li>
+  }
+  <p class="linked">@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
 }

@@ -19,6 +19,14 @@ body {
   margin-bottom: 0;
 }
 
+.notice {
+  color: #333;
+  font-size: 1.5em;
+  padding: 10px;
+  background: rgba(255, 255, 255, .7);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, .5);
+}
+
 .linked {
   color: #333;
   font-size: 2em;
@@ -27,7 +35,7 @@ body {
   padding: 10px;
   margin-bottom: 50px;
   margin-top: 50px;
-  width: 40%;
+  /* width: 40%; */
   margin-left: auto;
   margin-right: auto;
 }
