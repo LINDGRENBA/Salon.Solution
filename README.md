@@ -13,14 +13,18 @@ _Welcome Claire! Now keeping your business organized is easier than ever! You ca
 
 | Behavior   |   Input   |  Output |  Met? (Y/N)  |
 |----------|:-------------:|------:|-----------:|
-|    |   |    |    |
+|  Program will add a stylist's name and a list of all their clients to create a list of stylists  |  Name: Robert, Clients: client1, client2  |  - Robert  |  N  |
+|  Program will show stylist's details and clients when you click on their name | Select Robert | Name: Robert, Clients: client1, client2 |  N  |   
+|  Program will add a client and their details and associate them with a stylist | Jules, prefers Monday appointments, Robert's client |  - Jules  |  N  | 
+|  Program will show client's details if you click on their name  | Client: Jules, Prefered appointment days: Monday, Prefered Stylist: Robert |  N  |
 
 
 
 ## Stretch Goals
 | Behavior   |   Input   |  Output |  Met? (Y/N)  |
 |----------|:-------------:|------:|-----------:|
-|  |  |  |  |
+| Program will update a client or a stylist | Edit "Name" | Selected person's information updated in application | N |
+| Program will delete a client or a stylist | delete "Name" | Selected person removed from application | N |
 
 
 ## Setup/Installation Requirements
