@@ -14,8 +14,8 @@ namespace EauSalon.Models
     public int StylistId { get; set; }
     [DisplayName("Stylist's Name:")]
     public string Name { get; set; }
-    [DisplayName("Hire Date:")]
-    public DateTime HireDate { get; set; }
+    // [DisplayName("Hire Date:")]
+    // public DateTime HireDate { get; set; }
     [DisplayName("Scheduled Work Day:")]
     public WorkDay ScheduledWorkDays { get; set; }
 
