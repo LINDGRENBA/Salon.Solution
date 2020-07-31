@@ -13,6 +13,21 @@ namespace EauSalon.Models
     public int StylistId { get; set; }
     [DisplayName("Stylist's Name:")]
     public string Name { get; set; }
+    [DisplayName("Hire Date:")]
+    public DateTime HireDate { get; set; }
+    [DisplayName("Scheduled Work Day:")]
+    public WorkDays WorkDay { get; set; }
+
     public virtual ICollection<Client> Clients { get; set; }
+  }
+
+  public enum WorkDay
+  {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
   }
 }
