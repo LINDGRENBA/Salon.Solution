@@ -10,6 +10,15 @@
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.HireDate)
+  @Html.TextBoxFor(model => model.HireDate, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.WorkDay)
+  @Html.DropDownList("WorkDay",
+    new SelectList(Enum.GetValues(typeof(WorkDay))),
+    new { @class = "form-control" })
+  <br>
 
   <input type="submit" value="Add a Stylist" class="btn btn-default">
 }

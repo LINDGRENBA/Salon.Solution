@@ -16,7 +16,7 @@ namespace EauSalon.Models
     [DisplayName("Hire Date:")]
     public DateTime HireDate { get; set; }
     [DisplayName("Scheduled Work Day:")]
-    public WorkDays WorkDay { get; set; }
+    public WorkDay WorkDay { get; set; }
 
     public virtual ICollection<Client> Clients { get; set; }
   }
