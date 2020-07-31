@@ -19,5 +19,10 @@ namespace EauSalon.Controllers
       List<Stylist> model = _db.Stylists.OrderBy(stylist => stylist.Name).ToList();
       return View(model);
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
   }
 }

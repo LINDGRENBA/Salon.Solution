@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model EauSalon.Models.Stylist
+
+<h3>Add an EauSalon Stylist to your records</h3>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+
+  <input type="submit" value="Add a Stylist" class="btn btn-default">
+}
+
+
+<p class="linked">@Html.ActionLink("See a list of all Stylists", "Index", "Stylists")</p>
