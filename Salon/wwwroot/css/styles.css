@@ -10,12 +10,13 @@ body {
 }
 
 #footer {
-  position: sticky;
+  position: fixed;
   width: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
   background-color: #333;
   padding: 15px;
+  margin-bottom: 0;
 }
 
 .linked {
@@ -31,19 +32,4 @@ body {
   margin-right: auto;
 }
 
-/* 
-#main-container p.linked:link {
-  color: #333;
-}
 
-#main-container p.linked:visited {
-  color: #666;
-}
-
-#main-container p.linked:hover {
-  color: #A7BED3; /*light steel blue*/
-}
-
-#main-container p.linked:active {
-  color: #A7BED3; /*light steel blue*/
-} */
