@@ -12,3 +12,25 @@ body {
   color: #FFF;
   padding: 15px;
 }
+
+.linked {
+  color: #333;
+  font-size: 2em;
+}
+
+/* 
+#main-container p.linked:link {
+  color: #333;
+}
+
+#main-container p.linked:visited {
+  color: #666;
+}
+
+#main-container p.linked:hover {
+  color: #A7BED3; /*light steel blue*/
+}
+
+#main-container p.linked:active {
+  color: #A7BED3; /*light steel blue*/
+} */
