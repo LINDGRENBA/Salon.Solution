@@ -24,7 +24,7 @@ namespace EauSalon
     {
       services.AddMvc();
       services.AddEntityFrameworkMySql()
-        .AddDbContext<ClientContext>(options => options
+        .AddDbContext<EauSalonContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 
