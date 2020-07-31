@@ -17,13 +17,13 @@ namespace EauSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Stylist> model = _db.Stylists.OrderBy(stylist => stylist.Name).ToList();
+      List<Stylist> model = _db.Stylists.ToList();
       return View(model);
     }
 
     public ActionResult Create()
     {
-      ViewBag.WorkDay = new SelectList(_db.Stylists, "ScheduledWorkDays", "Scheduled Work Day");
+      // ViewBag.WorkDay = new SelectList(_db.Stylists, "ScheduledWorkDays", "Scheduled Work Day");
       return View();
     }
 

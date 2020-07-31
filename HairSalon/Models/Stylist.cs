@@ -16,19 +16,19 @@ namespace EauSalon.Models
     public string Name { get; set; }
     // [DisplayName("Hire Date:")]
     // public DateTime HireDate { get; set; }
-    [DisplayName("Scheduled Work Day:")]
-    public WorkDay ScheduledWorkDays { get; set; }
+    // [DisplayName("Scheduled Work Day:")]
+    // public WorkDay ScheduledWorkDays { get; set; }
 
     public virtual ICollection<Client> Clients { get; set; }
   }
 
-  public enum WorkDay
-  {
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday
-  }
+  // public enum WorkDay
+  // {
+  //   Monday,
+  //   Tuesday,
+  //   Wednesday,
+  //   Thursday,
+  //   Friday,
+  //   Saturday
+  // }
 }

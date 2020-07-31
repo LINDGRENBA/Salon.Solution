@@ -78,6 +78,8 @@ or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootca
 | C:\Program Files\dotnet\sdk\2.2.203\Sdks\Microsoft.NET.Sdk.Razor\build\netstandard2.0\Sdk.Razor.CurrentVersion.targets(510,5): error MSB3027: Could not copy "obj\Debug\netcoreapp2.2\EauSalon.Views.dll" to "C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\bin\Debug\netcoreapp2.2\EauSalon.Views.dll". Exceeded retry count of 10. Failed.  | Enter command `dotnet watch run` into terminal | Y | remove obj and bin directories, close VS Code, reopen, navigate into Salon directory, enter `dotnet restore` into terminal and then `dotnet build` |
 | Views\Shared\_Layout.cshtml(13,7): warning MVC1000: Use of IHtmlHelper.Partial may result in application deadlocks. Consider using <partial> Tag Helper or IHtmlHelper.PartialAsync. [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\EauSalon.csproj] | n/a | Y | X |
 | Models\Stylist.cs(17,12): error CS0246: The type or namespace name 'DateTime' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\HairSalon\EauSalon.csproj] | `dotnet build` | Y | Add `using System;` statement to top of Stylist.cs file |
+| Text in 'Hire Date' form field is white | Views/Stylists/Create.cshtml | N | x |
+| MySqlException: Unknown column 'WorkDay' in 'field list' | Submit Create Stylist form | N | x |
 | x | x | N | x |
 
 
