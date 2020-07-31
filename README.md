@@ -52,7 +52,18 @@ _Welcome Claire! Now keeping your business organized is easier than ever! You ca
 1. Open MySQL Workbench and double click on the grey box under the line `MySQL Connections` (this box should say `mamp` and have some text and numbers ending in `:3306`). This will launch the MySQL Workbench. You may be prompted to enter the same password that you used in the previous step (ex: `tomato`). 
 2. You should see an icon in the upper left that looks like a little piece of paper with the letters `SQL` and a + sign. Hover over the icon and confirm that this is the 'create a new SQL tab for executing queries' icon. Once confirmed, double click the icon.
 3. Enter the following text into the window for the SQL File tab.
-```
+
+```CREATE TABLE `brittany_lindgren`.`stylists` (
+  `StylistId` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NULL,
+  PRIMARY KEY (`StylistId`));
+
+  CREATE TABLE `brittany_lindgren`.`clients` (
+  `ClientId` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NULL,
+  `PreferredDays` VARCHAR(255) NULL,
+  `ShortNotice` VARCHAR(255) NULL,
+  PRIMARY KEY (`ClientId`));
 ```
 4. Click 'execute' (this may appear as a lightening bolt icon).
 
