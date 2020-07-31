@@ -13,5 +13,11 @@ namespace EauSalon.Controllers
     {
       _db = db;
     }
+
+    public ActionResult Index()
+    {
+      List<Stylist> model = _db.Stylists.OrderBy(stylist => stylist.Name).ToList();
+      return View(model);
+    }
   }
 }
