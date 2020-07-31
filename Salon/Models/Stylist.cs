@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace EauSalon
+namespace EauSalon.Models
 {
   public class Stylist
   {

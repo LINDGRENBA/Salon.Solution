@@ -72,8 +72,8 @@ _Welcome Claire! Now keeping your business organized is easier than ever! You ca
 | Bug : Message |  Situation  | Resolved (Y/N) |  How was the issue resolved?  |
 | ------- | ----- | ------ | ------- |
 | Models\Stylist.cs(16,32): error CS0246: The type or namespace name 'Client' could not be found (are you missing a using directive 
-or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\EauSalon.csproj] | Run `dotnet build` | N |  |
-| x | x | N | x |
+or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\EauSalon.csproj] | Run `dotnet build` | Y | Update namespace in Stylist.cs from EauSalon to EauSalon.Models |
+| Models\EauSalonContext.cs(12,22): error CS1061: 'DbContextOptionsBuilder' does not contain a definition for 'UseLazyLoadingProxies' and no accessible extension method 'UseLazyLoadingProxies' accepting a first argument of type 'DbContextOptionsBuilder' could be found (are you missing a using directive or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\EauSalon.csproj] | Run `dotnet build` | Y | Remove `protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){optionsBuilder.UseLazyLoadingProxies();}` from EauSalonContext.cs |
 | x | x | N | x |
 | x | x | N | x |
 
