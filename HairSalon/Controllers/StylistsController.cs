@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using EauSalon.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 
 namespace EauSalon.Controllers
@@ -22,6 +23,7 @@ namespace EauSalon.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.WorkDay = new SelectList(_db.Stylists, "ScheduledWorkDays", "Scheduled Work Day");
       return View();
     }
 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
+using System;
 
 namespace EauSalon.Models
 {
@@ -16,7 +17,7 @@ namespace EauSalon.Models
     [DisplayName("Hire Date:")]
     public DateTime HireDate { get; set; }
     [DisplayName("Scheduled Work Day:")]
-    public WorkDay WorkDay { get; set; }
+    public WorkDay ScheduledWorkDays { get; set; }
 
     public virtual ICollection<Client> Clients { get; set; }
   }
