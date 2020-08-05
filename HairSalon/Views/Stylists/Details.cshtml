@@ -1,11 +1,16 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
 @model EauSalon.Models.Stylist
 @using EauSalon.Models
 
-<h3>Stylist Details:</h3>
+<h3>Stylist Details</h3>
 <hr>
-<h3></h3>
-<p></p> *@
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<div class="linked">
+  <p>@Html.ActionLink("Return to list of EauSalon Stylists", "Index", "Stylists")</p>
+  <p>@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
+  <p>@Html.ActionLink("Return to list of EauSalon Clients", "Index", "Clients")</p>
+  <p>@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
+</div>
