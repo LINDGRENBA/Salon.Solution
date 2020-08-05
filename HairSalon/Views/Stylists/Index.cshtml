@@ -21,7 +21,9 @@ else
   {
     <li>@Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId})</li>
   }
-  <p class="linked">@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
-  <p class="linked">@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
+  <div class="linked">
+    <p>@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
+    <p>@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
+  </div>
 }
 
