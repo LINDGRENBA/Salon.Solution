@@ -21,7 +21,7 @@
       new { @class = "form-control" })
   <br>
   @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
+  @Html.DropDownList("StylistId", null, new { @class = "form-control"})
   @* do not put a form control on the dropdown list for StylistId, caused 133 problems *@
 
   <input type="submit" value="Add a Client" class="btn btn-default" />
