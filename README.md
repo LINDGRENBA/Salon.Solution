@@ -13,10 +13,10 @@ _Welcome Claire! Now keeping your business organized is easier than ever! You ca
 
 | Behavior   |   Input   |  Output |  Met? (Y/N)  |
 |----------|:-------------:|------:|-----------:|
-|  Program will add a stylist's name and a list of all their clients to the database to create a list of stylists  |  Name: Robert, Clients: client1, client2  |  StylistColumn: Robert StylistId: 1  |  N  |
-|  Program will get stylist's details and clients from database when you click on their name | Select Robert | Name: Robert, Clients: client1, client2 |  N  |   
-|  Program will add a client and their details to the database and associate them with a stylist based on the stylist's Id | Jules, prefers Monday appointments, Robert's client |  Jules - StylistId 1 (Robert)  |  N  | 
-|  Program will get client's details from the database if you click on their name  | Client: Jules, Prefered appointment days: Monday, Prefered Stylist: Robert |  N  |
+|  Program will add a stylist's name to the database to create a list of stylists  |  Name: Robert  |  StylistColumn: Robert StylistId: 1  |  Y  |
+|  Program will get stylist's details and clients from database when you click on their name | Select Robert | Name: Robert, Clients: client1, client2 |  Y  |   
+|  Program will add a client and their details to the database and associate them with a stylist based on the stylist's Id | Jules, prefers Monday appointments, Robert's client |  Jules - StylistId 1 (Robert)  |  Y  | 
+|  Program will get client's details from the database if you click on their name  | Client: Jules, Prefered appointment days: Monday, Prefered Stylist: Robert |  Y  |
 
 
 
@@ -83,8 +83,9 @@ or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootca
 | C:\Program Files\dotnet\sdk\2.2.203\Sdks\Microsoft.NET.Sdk.Razor\build\netstandard2.0\Sdk.Razor.CurrentVersion.targets(510,5): error MSB3027: Could not copy "obj\Debug\netcoreapp2.2\EauSalon.Views.dll" to "C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\bin\Debug\netcoreapp2.2\EauSalon.Views.dll". Exceeded retry count of 10. Failed.  | Enter command `dotnet watch run` into terminal | Y | remove obj and bin directories, close VS Code, reopen, navigate into Salon directory, enter `dotnet restore` into terminal and then `dotnet build` |
 | Views\Shared\_Layout.cshtml(13,7): warning MVC1000: Use of IHtmlHelper.Partial may result in application deadlocks. Consider using <partial> Tag Helper or IHtmlHelper.PartialAsync. [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\Salon\EauSalon.csproj] | n/a | Y | X |
 | Models\Stylist.cs(17,12): error CS0246: The type or namespace name 'DateTime' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\blindgren\Desktop\EPICODUS\Full Time Bootcamp\CS-and-NETCore\independent-projects\EauSalon.Solution\HairSalon\EauSalon.csproj] | `dotnet build` | Y | Add `using System;` statement to top of Stylist.cs file |
-| Text in 'Hire Date' form field is white | Views/Stylists/Create.cshtml | N | x |
-| MySqlException: Unknown column 'WorkDay' in 'field list' | Submit Create Stylist form | N | x |
+| Text in 'Hire Date' form field is white | Views/Stylists/Create.cshtml | Adding new Client and associated Stylist | Y | Unclear, appears to have resolved spontaneously |
+| MySqlException: Unknown column 'WorkDay' in 'field list' | Submit Create Stylist form | x | Y | Temporarily commented out property until future date |
+| Unable to cast object of type 'System.String' to type 'System.Int32' | Upon submission of form to add a new Client | Y | Correct data type of PreferredDays from `int` to `string` in Client.cs Model |
 | x | x | N | x |
 
 
@@ -99,6 +100,8 @@ _Please feel free to contact the authors through GitHub (LINDGRENBA) with any fe
 * C#
 * .NET-Core 2.2
 * ASP.NET Core MVC
+* Entity Framework Core
+* MySQL & MySQL Workbench
 * Visual Studio Code
 * Git Version Control
 * GitHub
