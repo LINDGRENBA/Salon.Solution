@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model EauSalon.Models.Client
+@using EauSalon.Models
+
+<h3>Client Details</h3>
+<hr>
+<div class="details">
+  <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+  <h4>@Html.DisplayNameFor(model => model.PreferredDays): @Html.DisplayFor(model => model.PreferredDays)</h4>
+  <h4>@Html.DisplayNameFor(model => model.ShortNotice): @Html.DisplayFor(model => model.ShortNotice)</h4>
+  <h4>@Html.DisplayNameFor(model => model.Stylist): @Html.DisplayFor(model => model.Stylist)</h4>
+</div>
+
+<div class="linked">
+  <p>@Html.ActionLink("Return to list of EauSalon Stylists", "Index", "Stylists")</p>
+  <p>@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
+  <p>@Html.ActionLink("Return to list of EauSalon Clients", "Index", "Clients")</p>
+  <p>@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
+</div>
+

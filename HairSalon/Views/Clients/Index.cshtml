@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+@using EauSalon.Models
+@model List<EauSalon.Models.Client>
+
+<h1>EauSalon's Clients</h1>
+
+
+  @if(@Model.Count == 0)
+  { 
+    <div class="notice">
+      <p>There are currently no records of any Clients at EauSalon.</p>
+      <p>If you'd like to add a Client to your records, click on the link below.</p>
+    </div>
+    <p class="linked">@Html.ActionLink("Add an EauSalon Client to your records", "Create", "Clients")</p>
+  }
+  else
+  {
+    <div class="details">
+    @foreach (Client client in Model)
+    {
+      <h3 class="client">@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist</h3>
+    }
+    </div>
+
+    <div class="linked">
+      <p>@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
+      <p>@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
+    </div>
+  }

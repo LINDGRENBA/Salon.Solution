@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@model EauSalon.Models.Client
+@using EauSalon.Models
+
+<h3>Add a new Eau Salon Client record</h3>
+
+<div class="new-client-form">
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control"})
+    <br>
+    @Html.LabelFor(model => model.PreferredDays)
+    @Html.TextBoxFor(model => model.PreferredDays, new { @class = "form-control"})
+    <br>
+    @Html.LabelFor(model => model.ShortNotice)
+    @Html.DropDownList("ShortNotice",
+        new SelectList(Enum.GetValues(typeof(Notice))),
+        new { @class = "form-control" })
+    <br>
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId" null, new { class = "form-control" })
+
+    <input type="submit" value="Add a Client" class="btn btn-default" />
+  }
+</div>
+<div class="linked">
+  <p>@Html.ActionLink("Return to list of EauSalon Clients", "Index", "Clients")</p>
+  <p>@Html.ActionLink("Add a new record for an EauSalon Stylist", "Create", "Stylists")</p>
+  <p>@Html.ActionLink("Return to list of EauSalon Stylists", "Index", "Stylists")</p>
+</div>
