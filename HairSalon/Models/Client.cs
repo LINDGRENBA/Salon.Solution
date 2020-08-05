@@ -13,6 +13,7 @@ namespace EauSalon.Models
     public int PreferredDays { get; set; }
     [DisplayName("Would the client like to be contacted about last minute openings:")]
     public ShortNotice ShortNotice { get; set; }
+    public virtual Stylist Stylist { get; set; }
   }
 
   public enum ShortNotice
