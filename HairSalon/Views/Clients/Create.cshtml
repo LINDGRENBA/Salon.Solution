@@ -17,7 +17,7 @@
   <br>
   @Html.LabelFor(model => model.ShortNotice)
   @Html.DropDownList("ShortNotice",
-      new SelectList(Enum.GetValues(typeof(ShortNotice))),
+      new SelectList(Enum.GetValues(typeof(Notice))),
       new { @class = "form-control" })
   <br>
   @Html.LabelFor(model => model.Stylist)
