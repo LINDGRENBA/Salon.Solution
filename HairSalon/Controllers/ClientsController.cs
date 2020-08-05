@@ -16,15 +16,16 @@ namespace EauSalon.Controllers
       _db = db;
     }
 
-        public ActionResult Index()
+    public ActionResult Index()
     {
-      List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
+      List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
       return View(model);
     }
 
     public ActionResult Create()
     {
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+      ViewBag.ShortNotice = new SelectList(_db.Clients, "ShortNotice", "Short Notice Appointment");
       return View();
     }
 
