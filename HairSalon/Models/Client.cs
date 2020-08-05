@@ -10,7 +10,7 @@ namespace EauSalon.Models
     [DisplayName("Client Name:")]
     public string Name { get; set; }
     [DisplayName("Preferred Appointment Days:")]
-    public int PreferredDays { get; set; }
+    public string PreferredDays { get; set; }
     [DisplayName("Would the client like to be contacted about last minute openings:")]
     public Notice ShortNotice { get; set; }
     public virtual Stylist Stylist { get; set; }
