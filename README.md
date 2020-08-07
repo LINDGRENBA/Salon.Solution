@@ -20,7 +20,6 @@ _Welcome Claire! Now keeping your business organized is easier than ever! You ca
 
 
 
-
 ## Stretch Goals
 | Behavior   |   Input   |  Output |  Met? (Y/N)  |
 |----------|:-------------:|------:|-----------:|
@@ -49,28 +48,53 @@ _Welcome Claire! Now keeping your business organized is easier than ever! You ca
 
 #### Configure the MySQL Workbench Database:
 * Install MySQL and MySQL Workbench first. During installation of MySQL you will be asked to create a password. This is important! Take note of your password. Once you have installed MySQL and MySQL Workbenck, start MySQL by entering `mysql -uroot -p+_yourpassword_` in the terminal. Example: password is `tomato`, enter `mysql -uroot ptomato`. If this doesn't work in your terminal, try using your computer's command line interface application. If you are successful, you will see a message in the terminal, ending with the line `mysql>`. Once you have succesfully completed these steps, follow the instructions below.
-1. Open MySQL Workbench and double click on the grey box under the line `MySQL Connections` (this box should say `mamp` and have some text and numbers ending in `:3306`). This will launch the MySQL Workbench. You may be prompted to enter the same password that you used in the previous step (ex: `tomato`). 
-2. You should see an icon in the upper left that looks like a little piece of paper with the letters `SQL` and a + sign. Hover over the icon and confirm that this is the 'create a new SQL tab for executing queries' icon. Once confirmed, double click the icon.
-3. Enter the following (excluding the ``` at the beginning and end of the code) text into the window for the SQL File tab.
+*  Open MySQL Workbench and double click on the grey box under the line `MySQL Connections` (this box should say `mamp` and have some text and numbers ending in `:3306`). This will launch the MySQL Workbench. You may be prompted to enter the same password that you used in the previous step (ex: `tomato`).   
 
-``` CREATE DATABASE `brittany_lindgren` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
-CREATE TABLE `stylists` (
-  `StylistId` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`StylistId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+#### Import Database to MySQL Workbench
+
+To set up the database for this project, you can follow the steps below to import it into MySQL Workbench.
+
+  * Open the Navigator, click on the `Administration` tab
+  * Select `Data Import/Restore`
+  * Select the option to `Import from Self-Contained File`
+  * To the right, click on the `...` box to select the database file from this project (the file in the root directory ending in .sql)
+  * Below the items from the last step, you'll see `Default Schema to be Imported To`, select  `New...` 
+  * Enter the name of the database, in this case `brittany_lindgren`
+  * Select the `Import Progress` tab and click on the `Start Import` button.
+  * Return to the Navigator window. Anywhere in that area, right click and select `refresh`
+  * Your database should appear in the navigator window.    
+
+
+  #### Create a New Schema Query:
+* You should see an icon in the upper left that looks like a little piece of paper with the letters `SQL` and a + sign. Hover over the icon and confirm that this is the 'create a new SQL tab for executing queries' icon. Once confirmed, double click the icon.
+* Copy paste the code below into the Query tab.
+* Then click 'execute' (this may appear as a lightening bolt icon).
+
+#### SQL SCHEMA QUERY
+``` 
+CREATE DATABASE IF NOT EXISTS brittany_lindgren; USE brittany_lindgren;
+
+DROP TABLE IF EXISTS `clients`;
 
 CREATE TABLE `clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
   `PreferredDays` varchar(255) DEFAULT NULL,
-  `ShortNotice` varchar(255) DEFAULT '0',
+  `ShortNotice` int DEFAULT '0',
   `StylistId` int DEFAULT '0',
   PRIMARY KEY (`ClientId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci; ```
+)
 
-4. Click 'execute' (this may appear as a lightening bolt icon).
+DROP TABLE IF EXISTS `stylists`;
+
+CREATE TABLE `stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+)
+```
+
 
 ## Known Bugs
 
