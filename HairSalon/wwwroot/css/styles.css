@@ -19,9 +19,15 @@ h1, h3 {
   padding: 10px;
 }
 
+ul {
+  padding: 20px;
+  background-color: #333;
+}
+
 li {
   font-size: 2em;
-  list-style-type: circle;
+  list-style-type: none;
+  text-decoration: underline;
   color: #FFF;
 }
 

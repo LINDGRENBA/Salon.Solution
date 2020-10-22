@@ -1,13 +1,17 @@
-# _Eau Claire's Salon_
+<h1 align = "center"> Eau Claire's Salon
 
-#### _C# ASP.NET Core MVC and EF Core practice for Epicodus, 07.31.2020_
+<h1 align = "center"><img width='500' height='250' src='HairSalon/wwwroot/img/homepage.PNG'> 
 
-#### By _**Brittany Lindgren**_
+<h4 align = "center"> C# ASP.NET Core MVC and EF Core practice for Epicodus, last updated 10.22.2020
 
+<h2 align = "center"> Developed by Brittany Lindgren
+
+
+<h1 align = "center"><img width='300' height='350' src='HairSalon/wwwroot/img/stylists.PNG'> 
 
 ## Description
 
-_Welcome Claire! Now keeping your business organized is easier than ever! You can use this personalized application to help you keep track of your stylists and their clients. 
+Welcome Claire! Now keeping your business organized is easier than ever! You can use this personalized application to help you keep track of your stylists and their clients. 
 
 ## Specifications
 

@@ -17,10 +17,12 @@
 }
 else
 {
-  @foreach (Stylist stylist in Model)
-  {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId})</li>
-  }
+  <ul>
+    @foreach (Stylist stylist in Model)
+    {
+      <li>@Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId})</li>
+    }
+  </ul>
   <div class="linked">
     <p>@Html.ActionLink("Add an EauSalon Stylist to your records", "Create", "Stylists")</p>
     <p>@Html.ActionLink("Add a new record for an EauSalon client", "Create", "Clients")</p>
